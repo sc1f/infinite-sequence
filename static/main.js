@@ -24,7 +24,7 @@ const getObjectCount = async function() {
     const objectCount = await count.text();
     const countNum = Number.parseInt(objectCount);
     const correctedCount = countNum - 2;
-    if (correctedCount >= 0) {
+    if (correctedCount <= 0) {
         return 0;
     }
     return correctedCount;
