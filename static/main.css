@@ -1,0 +1,176 @@
+html body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body, div.main {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+div.main {
+    display: flex;
+    flex-direction: column;
+}
+
+div.sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+div.sidebar a {
+    color: black;
+    font-size: 1rem;
+    margin: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+}
+
+div.sidebar a:hover {
+    text-decoration: underline;
+}
+
+div.sidebar a:visited {
+    text-decoration: none;
+}
+
+div.content {
+    display: flex;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+div#sequence {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+div#sequence:hover {
+    cursor: pointer;
+}
+
+div#screen {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+div#about {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    padding: 8em 2em;
+}
+
+div.about-content {
+    display: flex;
+    justify-content: center;
+}
+
+div.about-text {
+    flex: .5;
+    padding: 1em;
+}
+
+div.about-image-container {
+    margin: 0 2em 0 0;
+}
+
+div.about-image-container img {
+    height: 200px;
+}
+
+div.about-image-container p {
+    text-align: center;
+}
+
+div.footer {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    padding: 1em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+p.footer-text {
+    font-size: 1rem;
+    width: 5%;
+}
+
+p.footer-text.left {
+    margin: 0 auto 0.5rem 0;
+}
+
+p.footer-text.right {
+    margin: 0 0 0.5rem auto;
+}
+
+@media screen and (max-width: 1366px) {
+    div.sidebar {
+        background: white;
+        padding: 1em;
+    }
+
+    div.footer {
+        background: white;
+        display: block;
+        padding: 1em 0 0 0;
+    }
+
+    p.footer-text {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    div.sidebar a {
+        margin: 0;
+    }
+
+    div.content {
+        align-items: center;
+    }
+
+    div#about {
+        margin: 1.5em;
+        width: auto;
+    }
+
+    div.about-content {
+        flex-direction: column;
+    }
+
+    p.footer-text {
+        margin: 0 auto 0.5rem auto;
+    }
+
+    p.footer-text.small {
+        margin-top: 0;
+        font-size: 0.75rem;
+    }
+}
